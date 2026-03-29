@@ -1,6 +1,6 @@
-# 🇸🇳 Projet d'Ingénierie de Données et Analyse des Ventes (Contexte Sénégalais)
+# Projet d'Ingénierie de Données et Analyse des Ventes (Contexte Sénégalais)
 
-## 📌 Présentation du projet
+## Présentation du projet
 
 Ce projet illustre un workflow complet d'ingénierie de données et d'analyse à l'aide de Python et SQL, appliqué à un jeu de données de ventes de grande taille, **inspiré du contexte commercial sénégalais**.
 
@@ -8,29 +8,29 @@ L'objectif est de reproduire des situations réelles rencontrées en entreprise 
 
 ---
 
-## 🎯 Objectifs du projet
+## Objectifs du projet
 
-✅ Concevoir et manipuler un jeu de données structuré de grande taille (45 000+ lignes)  
-✅ Appliquer les bonnes pratiques de l'ingénierie de données  
-✅ Réaliser des analyses SQL avancées orientées business  
-✅ Construire un pipeline de données clair et reproductible  
-✅ Démontrer une forte capacité de raisonnement sur la donnée  
+- Concevoir et manipuler un jeu de données structuré de grande taille (45 000+ lignes)
+- Appliquer les bonnes pratiques de l'ingénierie de données
+- Réaliser des analyses SQL avancées orientées business
+- Construire un pipeline de données clair et reproductible
+- Démontrer une forte capacité de raisonnement sur la donnée
 
 ---
 
-## 🗂 Description du jeu de données
+## Description du jeu de données
 
-### 📄 Type de données
-- Jeu de données **simulé** 
+### Type de données
+- Jeu de données **simulé**
 - Inspiré de **schémas commerciaux réalistes au Sénégal**
 - Basé sur des recherches approfondies du marché sénégalais (prix officiels, produits typiques, saisonnalité)
 
-### 📦 Taille
+### Taille
 - Environ **45 965 enregistrements**
 - Période : **Année 2024 complète**
 - CA total : **3,49 milliards FCFA**
 
-### 📑 Colonnes
+### Colonnes
 
 | Colonne | Description |
 |---------|-------------|
@@ -44,14 +44,14 @@ L'objectif est de reproduire des situations réelles rencontrées en entreprise 
 | `vendeur` | Identifiant du vendeur |
 | `chiffre_affaires` | CA de la transaction |
 
-### 🌍 Villes concernées
+### Villes concernées
 - **Dakar** (45% des ventes) - Capitale économique
 - **Thiès** (20%) - 2ème ville du pays
 - **Kaolack** (15%) - Hub commercial central
 - **Saint-Louis** (10%) - Ville historique du nord
 - **Ziguinchor** (10%) - Casamance, sud du pays
 
-### 📦 Catégories de produits
+### Catégories de produits
 
 Le dataset reflète le commerce sénégalais avec **6 catégories** :
 
@@ -62,7 +62,7 @@ Le dataset reflète le commerce sénégalais avec **6 catégories** :
 5. **Cosmétiques** : Crèmes, Huiles (coco, argan), Henné, Beurre de karité
 6. **Construction** : Ciment, Fer à béton, Peinture, Carrelage
 
-### 💳 Modes de paiement (réalité sénégalaise)
+### Modes de paiement (réalité sénégalaise)
 
 - **Orange Money** (35%) - Leader historique
 - **Wave** (30%) - Challenger récent très populaire
@@ -71,7 +71,7 @@ Le dataset reflète le commerce sénégalais avec **6 catégories** :
 - **Carte bancaire** (5%) - Faible taux de bancarisation
 - **Wizall** (2%)
 
-### 🎉 Saisonnalité (fêtes et périodes commerciales)
+### Saisonnalité (fêtes et périodes commerciales)
 
 Le dataset intègre les **pics de ventes** liés aux événements sénégalais :
 
@@ -83,11 +83,11 @@ Le dataset intègre les **pics de ventes** liés aux événements sénégalais :
 - **Rentrée scolaire** (octobre) → +100%
 - **Fin d'année** (décembre) → +120%
 
-### 📌 Remarque sur la qualité des données
+### Remarque sur la qualité des données
 
 Les données ont été volontairement enrichies avec :
-- ✅ **Prix réalistes** issus de sources officielles (Ministère du Commerce, PrixDakar.com)
-- ✅ **Anomalies intentionnelles** (2%) pour tester les compétences de nettoyage :
+- **Prix réalistes** issus de sources officielles (Ministère du Commerce, PrixDakar.com)
+- **Anomalies intentionnelles** (2%) pour tester les compétences de nettoyage :
   - Valeurs manquantes
   - Prix aberrants
   - Quantités négatives ou nulles
@@ -95,7 +95,7 @@ Les données ont été volontairement enrichies avec :
 
 ---
 
-## 🛠 Technologies utilisées
+## Technologies utilisées
 
 - **Python 3.12**
 - **Pandas** - Manipulation de données
@@ -106,8 +106,7 @@ Les données ont été volontairement enrichies avec :
 
 ---
 
-## 🏗 Structure du projet
-
+## Structure du projet
 ```
 sales-data-engineering/
 │
@@ -128,77 +127,75 @@ sales-data-engineering/
 
 ---
 
-## 🔄 Pipeline de traitement des données
+## Pipeline de traitement des données
 
-### 1️⃣ Génération des données
+### 1. Génération des données
 - Création d'un dataset synthétique avec Python
 - Application de règles métiers (prix FCFA, quantités, villes, saisonnalité)
 - Respect du contexte commercial sénégalais
 
-### 2️⃣ Ingestion
+### 2. Ingestion
 - Chargement du fichier CSV avec Pandas
 - Vérification du schéma des données
 
-### 3️⃣ Nettoyage
+### 3. Nettoyage
 - Détection et traitement des valeurs manquantes
 - Normalisation des types
 - Vérification des valeurs aberrantes
 - Suppression des doublons
 
-### 4️⃣ Transformation
+### 4. Transformation
 - Calcul du chiffre d'affaires
 - Agrégations par ville, catégorie et période
 - Enrichissement avec indicateurs métiers
 
-### 5️⃣ Analyses SQL
+### 5. Analyses SQL
 - Requêtes `JOIN`, `GROUP BY`, `HAVING`
 - Fonctions analytiques (`WINDOW FUNCTIONS`)
 - Extraction d'indicateurs clés (KPI)
 
 ---
 
-## 📈 Principaux indicateurs analysés
+## Principaux indicateurs analysés
 
-- 🏆 Produits générant le plus de chiffre d'affaires
-- 🌍 Performance des ventes par ville
-- 📅 Évolution mensuelle du chiffre d'affaires
-- 📊 Contribution des catégories au CA total
-- 💎 Identification des ventes à forte valeur
-- 💳 Répartition par mode de paiement
-- 📈 Impact de la saisonnalité (Tabaski, Ramadan, etc.)
-
----
-
-## 💡 Intérêt du projet
-
-✔️ Reflète un travail **réel d'ingénierie de données**  
-✔️ Montre une capacité à traiter de **grands volumes de données**  
-✔️ Met en valeur une **bonne maîtrise du SQL**  
-✔️ Adapté au **contexte africain et sénégalais**  
-✔️ Pertinent pour les **stages et premiers emplois**  
-✔️ Démontre une capacité de **recherche et contextualisation**  
+- Produits générant le plus de chiffre d'affaires
+- Performance des ventes par ville
+- Évolution mensuelle du chiffre d'affaires
+- Contribution des catégories au CA total
+- Identification des ventes à forte valeur
+- Répartition par mode de paiement
+- Impact de la saisonnalité (Tabaski, Ramadan, etc.)
 
 ---
 
-## 🚀 Exécution du projet
+## Intérêt du projet
+
+- Reflète un travail **réel d'ingénierie de données**
+- Montre une capacité à traiter de **grands volumes de données**
+- Met en valeur une **bonne maîtrise du SQL**
+- Adapté au **contexte africain et sénégalais**
+- Pertinent pour les **stages et premiers emplois**
+- Démontre une capacité de **recherche et contextualisation**
+
+---
+
+## Exécution du projet
 
 ### Installation des dépendances
-
 ```bash
 pip install -r requirements.txt
 ```
 
 ### Génération des données
-
 ```bash
 python scripts/generation_donnees.py
 ```
 
 **Résultat attendu :**
 ```
-✅ Dataset sauvegardé : data/sales_data.csv
-📊 Taille du fichier : 20.63 MB
-💰 Chiffre d'affaires total : 3,490,720,809 FCFA
+Dataset sauvegardé : data/sales_data.csv
+Taille du fichier : 20.63 MB
+Chiffre d'affaires total : 3,490,720,809 FCFA
 ```
 
 ### Exploration et analyse
@@ -210,24 +207,24 @@ jupyter notebook notebooks/
 
 ---
 
-## 🎓 Compétences démontrées
+## Compétences démontrées
 
 ### Compétences techniques
-- 🐍 **Python** : Pandas, NumPy, génération de données
-- 🗄️ **SQL** : Requêtes avancées, agrégations, window functions
-- 📊 **Analyse de données** : Statistiques descriptives, visualisation
-- 🧹 **Data Cleaning** : Détection et traitement des anomalies
-- 🔄 **ETL** : Pipeline complet Extract-Transform-Load
+- **Python** : Pandas, NumPy, génération de données
+- **SQL** : Requêtes avancées, agrégations, window functions
+- **Analyse de données** : Statistiques descriptives, visualisation
+- **Data Cleaning** : Détection et traitement des anomalies
+- **ETL** : Pipeline complet Extract-Transform-Load
 
 ### Compétences méthodologiques
-- 🔍 **Recherche documentaire** : Sources officielles (Ministère, sites sénégalais)
-- 🎯 **Contextualisation** : Adaptation au marché local
-- 📝 **Documentation** : Code commenté, README détaillé
-- 🧪 **Qualité** : Introduction volontaire d'anomalies pour tests
+- **Recherche documentaire** : Sources officielles (Ministère, sites sénégalais)
+- **Contextualisation** : Adaptation au marché local
+- **Documentation** : Code commenté, README détaillé
+- **Qualité** : Introduction volontaire d'anomalies pour tests
 
 ---
 
-## 🔮 Améliorations futures
+## Améliorations futures
 
 - [ ] Intégration avec **PostgreSQL**
 - [ ] Orchestration du pipeline avec **Apache Airflow**
@@ -239,15 +236,15 @@ jupyter notebook notebooks/
 
 ---
 
-## 👤 Auteur
+## Auteur
 
-**Oumaro Titans DJIGUIMDE**  
-Étudiant en Ingénierie de Données et Intelligence Artificielle  
-📍 Sénégal  
+**Oumaro Titans DJIGUIMDE**
+Étudiant en Ingénierie de Données et Intelligence Artificielle
+Sénégal
 
 ---
 
-## 📊 Sources et Références
+## Sources et Références
 
 Ce projet s'appuie sur des **données réelles du marché sénégalais** :
 
@@ -272,7 +269,7 @@ Ce projet s'appuie sur des **données réelles du marché sénégalais** :
 
 ---
 
-## 📣 Mot de fin
+## Mot de fin
 
 Ce projet a été conçu avec une **approche professionnelle**, en respectant les **standards de l'industrie**, afin de maximiser l'attractivité du profil pour les **entreprises tech** et démontrer une **maîtrise technique et contextuelle** de l'ingénierie de données.
 
@@ -280,4 +277,4 @@ Le choix d'un contexte sénégalais reflète une **volonté de valoriser les ré
 
 ---
 
-⭐ **Si ce projet vous intéresse, n'hésitez pas à le cloner et l'adapter à vos besoins !**
+**Si ce projet vous intéresse, n'hésitez pas à le cloner et l'adapter à vos besoins !**
