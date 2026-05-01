@@ -406,8 +406,8 @@ with tab4:
             textfont=dict(family='JetBrains Mono', size=11)
         ))
         fig.update_layout(**PLOTLY_LAYOUT, height=430,
-                          xaxis_title="", yaxis_title="CA (FCFA)",
-                          xaxis=dict(tickangle=-30, gridcolor='#1e2a42'))
+                          xaxis_title="", yaxis_title="CA (FCFA)")
+        fig.update_xaxes(tickangle=-30)
         st.plotly_chart(fig, use_container_width=True)
 
     st.markdown('<div class="section-title">Prix moyen vs quantité moyenne par catégorie</div>', unsafe_allow_html=True)
